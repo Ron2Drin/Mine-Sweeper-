@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mine-sweeper.css" />
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="onInit()">
+    <div class="container">
+        <h1>Mine Sweeper</h1>
+
+        <div class="statusBar">
+            <span>Bombs left:
+                <span class="bombsCount"></span>
+            </span>
+            
+            <span>
+                Lives:
+                <span class=" lives"> </span>
+            </span>
+            
+            <span>
+                Time: 
+                <span class="timer">00:00</span>
+            </span>
+
+        </div>
+
+        <div class="card-game">
+            <table></table>
+        </div>
+
+        <div>
+            <button class="btn restart hidden" onclick="resetGame()">Restart</button>
+        </div>
+
+        <div class="difficulty-container">
+            <h4>Difficulty</h4>
+            <button onclick="onChangeDifficulty(this)" class="btn difficulty">Easy</button>
+            <button onclick="onChangeDifficulty(this)" class="btn difficulty">Medium</button>
+            <button onclick="onChangeDifficulty(this)" class="btn difficulty">Hard</button>
+        </div>
+    </div>
+
+     <script src="js/utils.js"></script>
+     <script src="js/bombs.js"></script> 
+     <script src="js/main.js"></script>
+</body>
+</html>
